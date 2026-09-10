@@ -1,0 +1,3264 @@
+{
+  "summary": {
+    "n_cases": 20,
+    "overall": {
+      "n": 20,
+      "mean": 73.095,
+      "min": 60.2,
+      "p25": 66.6,
+      "median": 74.9,
+      "p75": 80.5,
+      "max": 86.5
+    },
+    "overall_hist": {
+      "bins": [
+        0,
+        50,
+        60,
+        70,
+        80,
+        90,
+        101
+      ],
+      "counts": [
+        0,
+        0,
+        8,
+        6,
+        6,
+        0
+      ]
+    },
+    "grades": {
+      "良好": 1,
+      "需改进": 11,
+      "不合格": 8
+    },
+    "metrics": {
+      "accuracy": {
+        "name": "事实准确性",
+        "weight": 0.2,
+        "scale": "0-1",
+        "dist": {
+          "n": 20,
+          "mean": 0.983,
+          "min": 0.6667,
+          "p25": 1.0,
+          "median": 1.0,
+          "p75": 1.0,
+          "max": 1.0
+        },
+        "hist": {
+          "bins": [
+            0,
+            0.6,
+            0.7,
+            0.8,
+            0.9,
+            0.95,
+            1.01
+          ],
+          "counts": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            19
+          ]
+        }
+      },
+      "groundedness": {
+        "name": "无编造性（幻觉率反面）",
+        "weight": 0.25,
+        "scale": "0-1",
+        "dist": {
+          "n": 20,
+          "mean": 0.879,
+          "min": 0.74,
+          "p25": 0.85,
+          "median": 0.9,
+          "p75": 0.9,
+          "max": 0.95
+        },
+        "hist": {
+          "bins": [
+            0,
+            0.6,
+            0.7,
+            0.8,
+            0.9,
+            0.95,
+            1.01
+          ],
+          "counts": [
+            0,
+            0,
+            1,
+            8,
+            10,
+            1
+          ]
+        }
+      },
+      "resolution": {
+        "name": "解决力（主动服务程度）",
+        "weight": 0.25,
+        "scale": "1-5",
+        "dist": {
+          "n": 20,
+          "mean": 2.435,
+          "min": 1.4,
+          "p25": 1.8,
+          "median": 2.4,
+          "p75": 2.9,
+          "max": 4.0
+        },
+        "hist": {
+          "bins": [
+            1,
+            2,
+            3,
+            4,
+            4.5,
+            5.01
+          ],
+          "counts": [
+            8,
+            7,
+            4,
+            1,
+            0
+          ]
+        }
+      },
+      "completeness": {
+        "name": "推进完备性",
+        "weight": 0.15,
+        "scale": "1-5",
+        "dist": {
+          "n": 20,
+          "mean": 3.225,
+          "min": 1.5,
+          "p25": 2.0,
+          "median": 4.0,
+          "p75": 4.5,
+          "max": 4.5
+        },
+        "hist": {
+          "bins": [
+            1,
+            2,
+            3,
+            4,
+            4.5,
+            5.01
+          ],
+          "counts": [
+            5,
+            3,
+            2,
+            2,
+            8
+          ]
+        }
+      },
+      "tone": {
+        "name": "语气与共情",
+        "weight": 0.15,
+        "scale": "1-5",
+        "dist": {
+          "n": 20,
+          "mean": 3.195,
+          "min": 2.3,
+          "p25": 3.0,
+          "median": 3.3,
+          "p75": 3.3,
+          "max": 4.2
+        },
+        "hist": {
+          "bins": [
+            1,
+            2,
+            3,
+            4,
+            4.5,
+            5.01
+          ],
+          "counts": [
+            0,
+            4,
+            14,
+            2,
+            0
+          ]
+        }
+      }
+    },
+    "gate_hits": 0,
+    "claim_totals": {
+      "n_supported": 21,
+      "n_contradicted": 1,
+      "n_unverifiable": 2
+    },
+    "claim_kind_counts": {
+      "other": 36,
+      "commitment": 7,
+      "policy_amount": 5,
+      "policy_statement": 16,
+      "product_attribute": 1,
+      "capability_claim": 2
+    },
+    "claims_per_case": 1.2,
+    "extraction_coverage": 0.358,
+    "accuracy_vacuous_cases": 8,
+    "metric_means": {
+      "accuracy": 0.983,
+      "groundedness": 0.879,
+      "resolution": 2.435,
+      "completeness": 3.225,
+      "tone": 3.195
+    },
+    "discriminating_power": {
+      "accuracy": 0.0145,
+      "groundedness": 0.0115,
+      "resolution": 0.0377,
+      "completeness": 0.039,
+      "tone": 0.0169
+    }
+  },
+  "comparison": {
+    "n": 20,
+    "exact_agreement": 0.7,
+    "within_1_level": 0.95,
+    "pairwise_concordance": 0.825,
+    "n_pairs": 97,
+    "confusion": {
+      "weak": {
+        "weak": 8,
+        "acceptable": 4,
+        "good": 1
+      },
+      "acceptable": {
+        "weak": 0,
+        "acceptable": 6,
+        "good": 0
+      },
+      "good": {
+        "weak": 0,
+        "acceptable": 1,
+        "good": 0
+      }
+    },
+    "per_case": [
+      {
+        "case_id": "case_01",
+        "intent": "快递放错柜取不出",
+        "score": 60.2,
+        "grade": "不合格",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 60.2,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 0.3,
+          "completeness": 0.3,
+          "tone": 0.46
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 1.5,
+          "completeness": 1.5,
+          "tone": 2.3
+        },
+        "claim_stats": {
+          "n_supported": 0,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 0,
+        "claim_kind_counts": {
+          "other": 2,
+          "commitment": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自己再联系一次客服",
+              "让用户自己联系快递方",
+              "让用户自行处理"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": true
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 3,
+            "mode": "needs_info"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": true,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "把责任推给了用户，没有体现主动服务意识",
+        "pred_verdict": "weak",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_02",
+        "intent": "充电宝能否上飞机",
+        "score": 69.9,
+        "grade": "不合格",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 69.9,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 0.46,
+          "completeness": 0.4,
+          "tone": 0.66
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 2.3,
+          "completeness": 2.0,
+          "tone": 3.3
+        },
+        "claim_stats": {
+          "n_supported": 1,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 1,
+        "claim_kind_counts": {
+          "policy_amount": 1,
+          "other": 2
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": true,
+            "deflections": [
+              "让用户自行检查/核对",
+              "把结论推给航空公司"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": true,
+            "has_instance_fact": false,
+            "deflection_count": 2,
+            "mode": "needs_instance_answer"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "没有查具体商品，只泛泛讲了规定，需要用户自己去确认",
+        "pred_verdict": "weak",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_03",
+        "intent": "退款到账时间",
+        "score": 73.8,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 73.8,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.95,
+          "resolution": 0.36,
+          "completeness": 0.8,
+          "tone": 0.6
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.95,
+          "resolution": 1.8,
+          "completeness": 4.0,
+          "tone": 3.0
+        },
+        "claim_stats": {
+          "n_supported": 4,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 4,
+        "claim_kind_counts": {
+          "policy_statement": 3,
+          "policy_amount": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自己再联系一次客服",
+              "让用户自己去页面操作"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 2,
+            "mode": "policy/advisory"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": false,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "acceptable",
+        "human_note": "通用信息本身是准确的，但没有帮用户查实际状态",
+        "pred_verdict": "acceptable",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_04",
+        "intent": "耳机三天就坏（质保期内）",
+        "score": 80.6,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 80.6,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 0.48,
+          "completeness": 0.9,
+          "tone": 0.84
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 2.4,
+          "completeness": 4.5,
+          "tone": 4.2
+        },
+        "claim_stats": {
+          "n_supported": 1,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 1,
+        "claim_kind_counts": {
+          "other": 2,
+          "policy_amount": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": true,
+            "deflections": [
+              "让用户自行检查/核对"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": true,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": true,
+            "has_instance_fact": false,
+            "deflection_count": 1,
+            "mode": "policy/advisory"
+          },
+          "tone": {
+            "empathy": true,
+            "greeting": false,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": true,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "先给了一堆排查步骤，没有直接给出解决方案，增加用户操作负担",
+        "pred_verdict": "acceptable",
+        "verdict_match": false,
+        "verdict_gap": 1
+      },
+      {
+        "case_id": "case_05",
+        "intent": "客服等待久投诉",
+        "score": 86.5,
+        "grade": "良好",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 86.5,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 0.8,
+          "completeness": 0.9,
+          "tone": 0.78
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 4.0,
+          "completeness": 4.5,
+          "tone": 3.9
+        },
+        "claim_stats": {
+          "n_supported": 0,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 0,
+        "claim_kind_counts": {
+          "other": 4,
+          "commitment": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": true,
+            "asks_info": true,
+            "gives_conclusion": false,
+            "deflections": [],
+            "internal_focus": true,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": true,
+            "commits_action": true,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 0,
+            "mode": "policy/advisory"
+          },
+          "tone": {
+            "empathy": true,
+            "greeting": false,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": true,
+            "internal_focus": true,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "没有立刻帮用户解决原始问题，而是说了内部事项（加强培训）",
+        "pred_verdict": "good",
+        "verdict_match": false,
+        "verdict_gap": 2
+      },
+      {
+        "case_id": "case_06",
+        "intent": "优惠券用不了",
+        "score": 61.7,
+        "grade": "不合格",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 61.7,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 0.36,
+          "completeness": 0.3,
+          "tone": 0.46
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 1.8,
+          "completeness": 1.5,
+          "tone": 2.3
+        },
+        "claim_stats": {
+          "n_supported": 0,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 0,
+        "claim_kind_counts": {
+          "other": 3
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自己再联系一次客服",
+              "让用户自行检查/核对"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 2,
+            "mode": "needs_info"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": true,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "罗列了一堆可能原因但没有帮用户实际排查",
+        "pred_verdict": "weak",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_07",
+        "intent": "异地登录疑似诈骗短信",
+        "score": 64.6,
+        "grade": "不合格",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 64.6,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 0.48,
+          "completeness": 0.3,
+          "tone": 0.46
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 2.4,
+          "completeness": 1.5,
+          "tone": 2.3
+        },
+        "claim_stats": {
+          "n_supported": 0,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 0,
+        "claim_kind_counts": {
+          "other": 4
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自行处理"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 1,
+            "mode": "needs_info"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": true,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "把判断责任推给用户，且情绪安抚不够",
+        "pred_verdict": "weak",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_08",
+        "intent": "手机壳材质",
+        "score": 74.9,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 74.9,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 0.36,
+          "completeness": 0.9,
+          "tone": 0.66
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 1.8,
+          "completeness": 4.5,
+          "tone": 3.3
+        },
+        "claim_stats": {
+          "n_supported": 1,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 1,
+        "claim_kind_counts": {
+          "product_attribute": 1,
+          "other": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自己去查商品详情页",
+              "让用户自己再联系一次客服"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": true,
+            "deflection_count": 2,
+            "mode": "needs_instance_answer"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "正确但没用：用户就是因为不想翻详情页才来问的",
+        "pred_verdict": "acceptable",
+        "verdict_match": false,
+        "verdict_gap": 1
+      },
+      {
+        "case_id": "case_09",
+        "intent": "退货运费谁出",
+        "score": 80.5,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 80.5,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.94,
+          "resolution": 0.58,
+          "completeness": 0.9,
+          "tone": 0.6
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.94,
+          "resolution": 2.9,
+          "completeness": 4.5,
+          "tone": 3.0
+        },
+        "claim_stats": {
+          "n_supported": 3,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 3,
+        "claim_kind_counts": {
+          "policy_statement": 3,
+          "other": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": true,
+            "deflections": [
+              "让用户自己再联系一次客服"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": true,
+            "has_instance_fact": false,
+            "deflection_count": 1,
+            "mode": "policy/advisory"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": false,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "acceptable",
+        "human_note": "规则说明正确，但没追问具体情况；作为自动回复给出规则本身也有价值",
+        "pred_verdict": "acceptable",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_10",
+        "intent": "未发货能否取消",
+        "score": 81.0,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 81.0,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.925,
+          "resolution": 0.58,
+          "completeness": 0.9,
+          "tone": 0.66
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.925,
+          "resolution": 2.9,
+          "completeness": 4.5,
+          "tone": 3.3
+        },
+        "claim_stats": {
+          "n_supported": 2,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 2,
+        "claim_kind_counts": {
+          "policy_statement": 1,
+          "other": 1,
+          "policy_amount": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": true,
+            "deflections": [
+              "让用户自己再联系一次客服"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": true,
+            "has_instance_fact": false,
+            "deflection_count": 1,
+            "mode": "policy/advisory"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "acceptable",
+        "human_note": "基本正确，给出操作路径和退款时间；作为自动回复可接受",
+        "pred_verdict": "acceptable",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_11",
+        "intent": "两件衣服换尺码",
+        "score": 71.2,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 71.2,
+        "normalized": {
+          "accuracy": 0.6667,
+          "groundedness": 0.74,
+          "resolution": 0.7,
+          "completeness": 0.8,
+          "tone": 0.66
+        },
+        "raw_metrics": {
+          "accuracy": 0.6667,
+          "groundedness": 0.74,
+          "resolution": 3.5,
+          "completeness": 4.0,
+          "tone": 3.3
+        },
+        "claim_stats": {
+          "n_supported": 2,
+          "n_contradicted": 1,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 3,
+        "claim_kind_counts": {
+          "policy_statement": 3
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": true,
+            "gives_conclusion": false,
+            "deflections": [],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": true,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 0,
+            "mode": "needs_info"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "直接给通用流程，没有追问具体商品信息来帮用户处理",
+        "pred_verdict": "acceptable",
+        "verdict_match": false,
+        "verdict_gap": 1
+      },
+      {
+        "case_id": "case_12",
+        "intent": "物流两天没更新",
+        "score": 62.3,
+        "grade": "不合格",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 62.3,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 0.3,
+          "completeness": 0.3,
+          "tone": 0.6
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 1.5,
+          "completeness": 1.5,
+          "tone": 3.0
+        },
+        "claim_stats": {
+          "n_supported": 0,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 0,
+        "claim_kind_counts": {
+          "other": 2
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自己再联系一次客服",
+              "让用户自己联系快递方",
+              "让用户自行处理",
+              "让用户被动等待"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 4,
+            "mode": "needs_info"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": false,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "罗列可能原因但没有帮用户查实际状态",
+        "pred_verdict": "weak",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_13",
+        "intent": "面膜成分（敏感肌）",
+        "score": 61.7,
+        "grade": "不合格",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 61.7,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 0.3,
+          "completeness": 0.4,
+          "tone": 0.46
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 1.5,
+          "completeness": 2.0,
+          "tone": 2.3
+        },
+        "claim_stats": {
+          "n_supported": 0,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 0,
+        "claim_kind_counts": {
+          "other": 2,
+          "commitment": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自己去查商品详情页",
+              "让用户自己再联系一次客服",
+              "让用户自己去页面操作"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": true
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 3,
+            "mode": "needs_instance_answer"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": true,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "用户明确说皮肤敏感，回复让用户自己看详情页，没有个性化关注",
+        "pred_verdict": "weak",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_14",
+        "intent": "建议增加实物视频",
+        "score": 79.0,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 79.0,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 0.6,
+          "completeness": 0.9,
+          "tone": 0.62
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 3.0,
+          "completeness": 4.5,
+          "tone": 3.1
+        },
+        "claim_stats": {
+          "n_supported": 0,
+          "n_contradicted": 0,
+          "n_unverifiable": 1
+        },
+        "accuracy_denom": 0,
+        "claim_kind_counts": {
+          "other": 1,
+          "commitment": 2,
+          "capability_claim": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自己去查商品详情页",
+              "让用户自己去页面操作"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": true,
+            "offer_help": true,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 2,
+            "mode": "policy/advisory"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": false,
+            "thanks": true,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": true,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "good",
+        "human_note": "建议类反馈处理得不错，表达了感谢并承诺反馈",
+        "pred_verdict": "acceptable",
+        "verdict_match": false,
+        "verdict_gap": 1
+      },
+      {
+        "case_id": "case_15",
+        "intent": "连续两次收到坏商品",
+        "score": 80.7,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 80.7,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 0.58,
+          "completeness": 0.9,
+          "tone": 0.68
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 2.9,
+          "completeness": 4.5,
+          "tone": 3.4
+        },
+        "claim_stats": {
+          "n_supported": 1,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 1,
+        "claim_kind_counts": {
+          "other": 3,
+          "policy_statement": 1,
+          "commitment": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": true,
+            "deflections": [
+              "让用户自行处理"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": true,
+            "has_instance_fact": false,
+            "deflection_count": 1,
+            "mode": "policy/advisory"
+          },
+          "tone": {
+            "empathy": true,
+            "greeting": false,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": true,
+            "internal_focus": true,
+            "vague_compensation": true
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "acceptable",
+        "human_note": "提到了补偿，但语气和力度不够，补偿不够具体",
+        "pred_verdict": "acceptable",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_16",
+        "intent": "两款手机哪个好",
+        "score": 78.6,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 78.6,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 0.68,
+          "completeness": 0.7,
+          "tone": 0.66
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.85,
+          "resolution": 3.4,
+          "completeness": 3.5,
+          "tone": 3.3
+        },
+        "claim_stats": {
+          "n_supported": 0,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 0,
+        "claim_kind_counts": {
+          "other": 3
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": true,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自己去查商品详情页"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": true,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 1,
+            "mode": "needs_info"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "acceptable",
+        "human_note": "追问使用场景和预算基本合理，但把用户推去自己看评价",
+        "pred_verdict": "acceptable",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_17",
+        "intent": "一条消息问两件事",
+        "score": 77.9,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 77.9,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 0.6,
+          "completeness": 0.7,
+          "tone": 0.66
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 3.0,
+          "completeness": 3.5,
+          "tone": 3.3
+        },
+        "claim_stats": {
+          "n_supported": 1,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 1,
+        "claim_kind_counts": {
+          "policy_statement": 1,
+          "other": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": true,
+            "asks_info": true,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自己去页面操作"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": true
+          },
+          "completeness": {
+            "asks_info": true,
+            "commits_action": true,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 1,
+            "mode": "needs_info"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "没有主动帮用户查，而是让用户自己去查",
+        "pred_verdict": "acceptable",
+        "verdict_match": false,
+        "verdict_gap": 1
+      },
+      {
+        "case_id": "case_18",
+        "intent": "扫地机器人两周就坏",
+        "score": 82.5,
+        "grade": "需改进",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 82.5,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.925,
+          "resolution": 0.58,
+          "completeness": 0.9,
+          "tone": 0.76
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.925,
+          "resolution": 2.9,
+          "completeness": 4.5,
+          "tone": 3.8
+        },
+        "claim_stats": {
+          "n_supported": 2,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 2,
+        "claim_kind_counts": {
+          "other": 3,
+          "policy_amount": 1,
+          "policy_statement": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": true,
+            "deflections": [
+              "让用户自己再联系一次客服"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": true,
+            "has_instance_fact": false,
+            "deflection_count": 1,
+            "mode": "policy/advisory"
+          },
+          "tone": {
+            "empathy": true,
+            "greeting": false,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "acceptable",
+        "human_note": "基本正确，给出质保期和方案；但没确认用户倾向哪种方案",
+        "pred_verdict": "acceptable",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_19",
+        "intent": "包什么时候补货",
+        "score": 67.7,
+        "grade": "不合格",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 67.7,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.91,
+          "resolution": 0.36,
+          "completeness": 0.4,
+          "tone": 0.66
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.91,
+          "resolution": 1.8,
+          "completeness": 2.0,
+          "tone": 3.3
+        },
+        "claim_stats": {
+          "n_supported": 2,
+          "n_contradicted": 0,
+          "n_unverifiable": 1
+        },
+        "accuracy_denom": 2,
+        "claim_kind_counts": {
+          "policy_statement": 2,
+          "capability_claim": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "让用户自己再联系一次客服",
+              "让用户自行检查/核对"
+            ],
+            "internal_focus": false,
+            "misdirected": false,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": true
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 2,
+            "mode": "needs_instance_answer"
+          },
+          "tone": {
+            "empathy": false,
+            "greeting": true,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": false,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "没有查具体商品，给了通用建议",
+        "pred_verdict": "weak",
+        "verdict_match": true,
+        "verdict_gap": 0
+      },
+      {
+        "case_id": "case_20",
+        "intent": "退货流程看不懂",
+        "score": 66.6,
+        "grade": "不合格",
+        "gates_applied": [],
+        "capped": false,
+        "raw_score_before_gate": 66.6,
+        "normalized": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 0.28,
+          "completeness": 0.3,
+          "tone": 0.84
+        },
+        "raw_metrics": {
+          "accuracy": 1.0,
+          "groundedness": 0.9,
+          "resolution": 1.4,
+          "completeness": 1.5,
+          "tone": 4.2
+        },
+        "claim_stats": {
+          "n_supported": 1,
+          "n_contradicted": 0,
+          "n_unverifiable": 0
+        },
+        "accuracy_denom": 1,
+        "claim_kind_counts": {
+          "other": 1,
+          "policy_statement": 1,
+          "commitment": 1
+        },
+        "evidence": {
+          "resolution": {
+            "commits_action": false,
+            "asks_info": false,
+            "gives_conclusion": false,
+            "deflections": [
+              "把排查工作转给用户截图"
+            ],
+            "internal_focus": false,
+            "misdirected": true,
+            "delayed_remedy": false,
+            "feedback_ack": false,
+            "offer_help": false,
+            "deflection_primary": false
+          },
+          "completeness": {
+            "asks_info": false,
+            "commits_action": false,
+            "gives_conclusion": false,
+            "has_instance_fact": false,
+            "deflection_count": 1,
+            "mode": "needs_info"
+          },
+          "tone": {
+            "empathy": true,
+            "greeting": false,
+            "thanks": false,
+            "blame": false,
+            "over_promise": false,
+            "comfort_needed": true,
+            "internal_focus": false,
+            "vague_compensation": false
+          }
+        },
+        "judge": "mock-rules-v1",
+        "human_verdict": "weak",
+        "human_note": "答非所问：又重复了一遍用户说搞不懂的退货流程",
+        "pred_verdict": "weak",
+        "verdict_match": true,
+        "verdict_gap": 0
+      }
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "case_01",
+      "intent": "快递放错柜取不出",
+      "score": 60.2,
+      "grade": "不合格",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 60.2,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 0.3,
+        "completeness": 0.3,
+        "tone": 0.46
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 1.5,
+        "completeness": 1.5,
+        "tone": 2.3
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "other": 2,
+        "commitment": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自己再联系一次客服",
+            "让用户自己联系快递方",
+            "让用户自行处理"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": true
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 3,
+          "mode": "needs_info"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": true,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "把责任推给了用户，没有体现主动服务意识",
+      "pred_verdict": "weak",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_02",
+      "intent": "充电宝能否上飞机",
+      "score": 69.9,
+      "grade": "不合格",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 69.9,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 0.46,
+        "completeness": 0.4,
+        "tone": 0.66
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 2.3,
+        "completeness": 2.0,
+        "tone": 3.3
+      },
+      "claim_stats": {
+        "n_supported": 1,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 1,
+      "claim_kind_counts": {
+        "policy_amount": 1,
+        "other": 2
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": true,
+          "deflections": [
+            "让用户自行检查/核对",
+            "把结论推给航空公司"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": true,
+          "has_instance_fact": false,
+          "deflection_count": 2,
+          "mode": "needs_instance_answer"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "没有查具体商品，只泛泛讲了规定，需要用户自己去确认",
+      "pred_verdict": "weak",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_03",
+      "intent": "退款到账时间",
+      "score": 73.8,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 73.8,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.95,
+        "resolution": 0.36,
+        "completeness": 0.8,
+        "tone": 0.6
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.95,
+        "resolution": 1.8,
+        "completeness": 4.0,
+        "tone": 3.0
+      },
+      "claim_stats": {
+        "n_supported": 4,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 4,
+      "claim_kind_counts": {
+        "policy_statement": 3,
+        "policy_amount": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自己再联系一次客服",
+            "让用户自己去页面操作"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 2,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": false,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "acceptable",
+      "human_note": "通用信息本身是准确的，但没有帮用户查实际状态",
+      "pred_verdict": "acceptable",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_04",
+      "intent": "耳机三天就坏（质保期内）",
+      "score": 80.6,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 80.6,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 0.48,
+        "completeness": 0.9,
+        "tone": 0.84
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 2.4,
+        "completeness": 4.5,
+        "tone": 4.2
+      },
+      "claim_stats": {
+        "n_supported": 1,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 1,
+      "claim_kind_counts": {
+        "other": 2,
+        "policy_amount": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": true,
+          "deflections": [
+            "让用户自行检查/核对"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": true,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": true,
+          "has_instance_fact": false,
+          "deflection_count": 1,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": true,
+          "greeting": false,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": true,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "先给了一堆排查步骤，没有直接给出解决方案，增加用户操作负担",
+      "pred_verdict": "acceptable",
+      "verdict_match": false,
+      "verdict_gap": 1
+    },
+    {
+      "case_id": "case_05",
+      "intent": "客服等待久投诉",
+      "score": 86.5,
+      "grade": "良好",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 86.5,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 0.8,
+        "completeness": 0.9,
+        "tone": 0.78
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 4.0,
+        "completeness": 4.5,
+        "tone": 3.9
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "other": 4,
+        "commitment": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": true,
+          "asks_info": true,
+          "gives_conclusion": false,
+          "deflections": [],
+          "internal_focus": true,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": true,
+          "commits_action": true,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 0,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": true,
+          "greeting": false,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": true,
+          "internal_focus": true,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "没有立刻帮用户解决原始问题，而是说了内部事项（加强培训）",
+      "pred_verdict": "good",
+      "verdict_match": false,
+      "verdict_gap": 2
+    },
+    {
+      "case_id": "case_06",
+      "intent": "优惠券用不了",
+      "score": 61.7,
+      "grade": "不合格",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 61.7,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 0.36,
+        "completeness": 0.3,
+        "tone": 0.46
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 1.8,
+        "completeness": 1.5,
+        "tone": 2.3
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "other": 3
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自己再联系一次客服",
+            "让用户自行检查/核对"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 2,
+          "mode": "needs_info"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": true,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "罗列了一堆可能原因但没有帮用户实际排查",
+      "pred_verdict": "weak",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_07",
+      "intent": "异地登录疑似诈骗短信",
+      "score": 64.6,
+      "grade": "不合格",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 64.6,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 0.48,
+        "completeness": 0.3,
+        "tone": 0.46
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 2.4,
+        "completeness": 1.5,
+        "tone": 2.3
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "other": 4
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自行处理"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 1,
+          "mode": "needs_info"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": true,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "把判断责任推给用户，且情绪安抚不够",
+      "pred_verdict": "weak",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_08",
+      "intent": "手机壳材质",
+      "score": 74.9,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 74.9,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 0.36,
+        "completeness": 0.9,
+        "tone": 0.66
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 1.8,
+        "completeness": 4.5,
+        "tone": 3.3
+      },
+      "claim_stats": {
+        "n_supported": 1,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 1,
+      "claim_kind_counts": {
+        "product_attribute": 1,
+        "other": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自己去查商品详情页",
+            "让用户自己再联系一次客服"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": true,
+          "deflection_count": 2,
+          "mode": "needs_instance_answer"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "正确但没用：用户就是因为不想翻详情页才来问的",
+      "pred_verdict": "acceptable",
+      "verdict_match": false,
+      "verdict_gap": 1
+    },
+    {
+      "case_id": "case_09",
+      "intent": "退货运费谁出",
+      "score": 80.5,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 80.5,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.94,
+        "resolution": 0.58,
+        "completeness": 0.9,
+        "tone": 0.6
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.94,
+        "resolution": 2.9,
+        "completeness": 4.5,
+        "tone": 3.0
+      },
+      "claim_stats": {
+        "n_supported": 3,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 3,
+      "claim_kind_counts": {
+        "policy_statement": 3,
+        "other": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": true,
+          "deflections": [
+            "让用户自己再联系一次客服"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": true,
+          "has_instance_fact": false,
+          "deflection_count": 1,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": false,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "acceptable",
+      "human_note": "规则说明正确，但没追问具体情况；作为自动回复给出规则本身也有价值",
+      "pred_verdict": "acceptable",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_10",
+      "intent": "未发货能否取消",
+      "score": 81.0,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 81.0,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.925,
+        "resolution": 0.58,
+        "completeness": 0.9,
+        "tone": 0.66
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.925,
+        "resolution": 2.9,
+        "completeness": 4.5,
+        "tone": 3.3
+      },
+      "claim_stats": {
+        "n_supported": 2,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 2,
+      "claim_kind_counts": {
+        "policy_statement": 1,
+        "other": 1,
+        "policy_amount": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": true,
+          "deflections": [
+            "让用户自己再联系一次客服"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": true,
+          "has_instance_fact": false,
+          "deflection_count": 1,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "acceptable",
+      "human_note": "基本正确，给出操作路径和退款时间；作为自动回复可接受",
+      "pred_verdict": "acceptable",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_11",
+      "intent": "两件衣服换尺码",
+      "score": 71.2,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 71.2,
+      "normalized": {
+        "accuracy": 0.6667,
+        "groundedness": 0.74,
+        "resolution": 0.7,
+        "completeness": 0.8,
+        "tone": 0.66
+      },
+      "raw_metrics": {
+        "accuracy": 0.6667,
+        "groundedness": 0.74,
+        "resolution": 3.5,
+        "completeness": 4.0,
+        "tone": 3.3
+      },
+      "claim_stats": {
+        "n_supported": 2,
+        "n_contradicted": 1,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 3,
+      "claim_kind_counts": {
+        "policy_statement": 3
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": true,
+          "gives_conclusion": false,
+          "deflections": [],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": true,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 0,
+          "mode": "needs_info"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "直接给通用流程，没有追问具体商品信息来帮用户处理",
+      "pred_verdict": "acceptable",
+      "verdict_match": false,
+      "verdict_gap": 1
+    },
+    {
+      "case_id": "case_12",
+      "intent": "物流两天没更新",
+      "score": 62.3,
+      "grade": "不合格",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 62.3,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 0.3,
+        "completeness": 0.3,
+        "tone": 0.6
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 1.5,
+        "completeness": 1.5,
+        "tone": 3.0
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "other": 2
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自己再联系一次客服",
+            "让用户自己联系快递方",
+            "让用户自行处理",
+            "让用户被动等待"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 4,
+          "mode": "needs_info"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": false,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "罗列可能原因但没有帮用户查实际状态",
+      "pred_verdict": "weak",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_13",
+      "intent": "面膜成分（敏感肌）",
+      "score": 61.7,
+      "grade": "不合格",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 61.7,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 0.3,
+        "completeness": 0.4,
+        "tone": 0.46
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 1.5,
+        "completeness": 2.0,
+        "tone": 2.3
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "other": 2,
+        "commitment": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自己去查商品详情页",
+            "让用户自己再联系一次客服",
+            "让用户自己去页面操作"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": true
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 3,
+          "mode": "needs_instance_answer"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": true,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "用户明确说皮肤敏感，回复让用户自己看详情页，没有个性化关注",
+      "pred_verdict": "weak",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_14",
+      "intent": "建议增加实物视频",
+      "score": 79.0,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 79.0,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 0.6,
+        "completeness": 0.9,
+        "tone": 0.62
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 3.0,
+        "completeness": 4.5,
+        "tone": 3.1
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 1
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "other": 1,
+        "commitment": 2,
+        "capability_claim": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自己去查商品详情页",
+            "让用户自己去页面操作"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": true,
+          "offer_help": true,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 2,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": false,
+          "thanks": true,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": true,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "good",
+      "human_note": "建议类反馈处理得不错，表达了感谢并承诺反馈",
+      "pred_verdict": "acceptable",
+      "verdict_match": false,
+      "verdict_gap": 1
+    },
+    {
+      "case_id": "case_15",
+      "intent": "连续两次收到坏商品",
+      "score": 80.7,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 80.7,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 0.58,
+        "completeness": 0.9,
+        "tone": 0.68
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 2.9,
+        "completeness": 4.5,
+        "tone": 3.4
+      },
+      "claim_stats": {
+        "n_supported": 1,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 1,
+      "claim_kind_counts": {
+        "other": 3,
+        "policy_statement": 1,
+        "commitment": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": true,
+          "deflections": [
+            "让用户自行处理"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": true,
+          "has_instance_fact": false,
+          "deflection_count": 1,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": true,
+          "greeting": false,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": true,
+          "internal_focus": true,
+          "vague_compensation": true
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "acceptable",
+      "human_note": "提到了补偿，但语气和力度不够，补偿不够具体",
+      "pred_verdict": "acceptable",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_16",
+      "intent": "两款手机哪个好",
+      "score": 78.6,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 78.6,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 0.68,
+        "completeness": 0.7,
+        "tone": 0.66
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 3.4,
+        "completeness": 3.5,
+        "tone": 3.3
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "other": 3
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": true,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自己去查商品详情页"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": true,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 1,
+          "mode": "needs_info"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "acceptable",
+      "human_note": "追问使用场景和预算基本合理，但把用户推去自己看评价",
+      "pred_verdict": "acceptable",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_17",
+      "intent": "一条消息问两件事",
+      "score": 77.9,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 77.9,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 0.6,
+        "completeness": 0.7,
+        "tone": 0.66
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 3.0,
+        "completeness": 3.5,
+        "tone": 3.3
+      },
+      "claim_stats": {
+        "n_supported": 1,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 1,
+      "claim_kind_counts": {
+        "policy_statement": 1,
+        "other": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": true,
+          "asks_info": true,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自己去页面操作"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": true
+        },
+        "completeness": {
+          "asks_info": true,
+          "commits_action": true,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 1,
+          "mode": "needs_info"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "没有主动帮用户查，而是让用户自己去查",
+      "pred_verdict": "acceptable",
+      "verdict_match": false,
+      "verdict_gap": 1
+    },
+    {
+      "case_id": "case_18",
+      "intent": "扫地机器人两周就坏",
+      "score": 82.5,
+      "grade": "需改进",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 82.5,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.925,
+        "resolution": 0.58,
+        "completeness": 0.9,
+        "tone": 0.76
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.925,
+        "resolution": 2.9,
+        "completeness": 4.5,
+        "tone": 3.8
+      },
+      "claim_stats": {
+        "n_supported": 2,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 2,
+      "claim_kind_counts": {
+        "other": 3,
+        "policy_amount": 1,
+        "policy_statement": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": true,
+          "deflections": [
+            "让用户自己再联系一次客服"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": true,
+          "has_instance_fact": false,
+          "deflection_count": 1,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": true,
+          "greeting": false,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "acceptable",
+      "human_note": "基本正确，给出质保期和方案；但没确认用户倾向哪种方案",
+      "pred_verdict": "acceptable",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_19",
+      "intent": "包什么时候补货",
+      "score": 67.7,
+      "grade": "不合格",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 67.7,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.91,
+        "resolution": 0.36,
+        "completeness": 0.4,
+        "tone": 0.66
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.91,
+        "resolution": 1.8,
+        "completeness": 2.0,
+        "tone": 3.3
+      },
+      "claim_stats": {
+        "n_supported": 2,
+        "n_contradicted": 0,
+        "n_unverifiable": 1
+      },
+      "accuracy_denom": 2,
+      "claim_kind_counts": {
+        "policy_statement": 2,
+        "capability_claim": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "让用户自己再联系一次客服",
+            "让用户自行检查/核对"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": true
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 2,
+          "mode": "needs_instance_answer"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "没有查具体商品，给了通用建议",
+      "pred_verdict": "weak",
+      "verdict_match": true,
+      "verdict_gap": 0
+    },
+    {
+      "case_id": "case_20",
+      "intent": "退货流程看不懂",
+      "score": 66.6,
+      "grade": "不合格",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 66.6,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 0.28,
+        "completeness": 0.3,
+        "tone": 0.84
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 1.4,
+        "completeness": 1.5,
+        "tone": 4.2
+      },
+      "claim_stats": {
+        "n_supported": 1,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 1,
+      "claim_kind_counts": {
+        "other": 1,
+        "policy_statement": 1,
+        "commitment": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "把排查工作转给用户截图"
+          ],
+          "internal_focus": false,
+          "misdirected": true,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 1,
+          "mode": "needs_info"
+        },
+        "tone": {
+          "empathy": true,
+          "greeting": false,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": true,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "human_verdict": "weak",
+      "human_note": "答非所问：又重复了一遍用户说搞不懂的退货流程",
+      "pred_verdict": "weak",
+      "verdict_match": true,
+      "verdict_gap": 0
+    }
+  ],
+  "config": {
+    "judge": "mock-rules-v1",
+    "data_dir": "/home/monster/work-space/0109",
+    "grade_bands": [
+      [
+        85,
+        100,
+        "良好"
+      ],
+      [
+        70,
+        85,
+        "需改进"
+      ],
+      [
+        0,
+        70,
+        "不合格"
+      ]
+    ],
+    "metrics": [
+      {
+        "key": "accuracy",
+        "name": "事实准确性",
+        "weight": 0.2,
+        "gate": {
+          "op": "<",
+          "threshold": 0.6,
+          "cap": 70.0,
+          "reason": "关键事实错误会让用户按错误信息操作，风险高于'回复无用'"
+        },
+        "business_word": "准确"
+      },
+      {
+        "key": "groundedness",
+        "name": "无编造性（幻觉率反面）",
+        "weight": 0.25,
+        "gate": {
+          "op": "<",
+          "threshold": 0.6,
+          "cap": 60.0,
+          "reason": "编造属于合规/安全红线问题，必须一票降级"
+        },
+        "business_word": "不能瞎编"
+      },
+      {
+        "key": "resolution",
+        "name": "解决力（主动服务程度）",
+        "weight": 0.25,
+        "gate": null,
+        "business_word": "有用"
+      },
+      {
+        "key": "completeness",
+        "name": "推进完备性",
+        "weight": 0.15,
+        "gate": null,
+        "business_word": "有用"
+      },
+      {
+        "key": "tone",
+        "name": "语气与共情",
+        "weight": 0.15,
+        "gate": null,
+        "business_word": "语气好"
+      }
+    ]
+  }
+}

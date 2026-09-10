@@ -1,0 +1,15 @@
+# 运行产物
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 编辑器 / 系统
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# 说明：outputs/ 下的产物（report.md / dashboard.html / *.csv / *.json）
+# 是本次任务的交付物，需要一起提交，因此不加入忽略列表。

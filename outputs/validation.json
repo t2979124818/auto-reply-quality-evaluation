@@ -1,0 +1,652 @@
+{
+  "adversarial": [
+    {
+      "case_id": "adv_01_fabricated_policy",
+      "intent": "退款到账时间",
+      "score": 60.0,
+      "grade": "不合格",
+      "gates_applied": [
+        {
+          "metric": "groundedness",
+          "value": 0.5,
+          "threshold": 0.6,
+          "cap": 60.0,
+          "reason": "编造属于合规/安全红线问题，必须一票降级"
+        }
+      ],
+      "capped": true,
+      "raw_score_before_gate": 69.4,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.5,
+        "resolution": 0.6,
+        "completeness": 0.8,
+        "tone": 0.66
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.5,
+        "resolution": 3.0,
+        "completeness": 4.0,
+        "tone": 3.3
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 1
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "policy_amount": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 0,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "expect": "低分或闸门命中",
+      "why": "编造了退款时效（KB 记录为 1-15 个工作日），属于「不能瞎编」要拦住的典型情况",
+      "red_lines": []
+    },
+    {
+      "case_id": "adv_02_fabricated_product",
+      "intent": "手机壳材质",
+      "score": 42.7,
+      "grade": "不合格",
+      "gates_applied": [
+        {
+          "metric": "groundedness",
+          "value": 0.567,
+          "threshold": 0.6,
+          "cap": 60.0,
+          "reason": "编造属于合规/安全红线问题，必须一票降级"
+        }
+      ],
+      "capped": false,
+      "raw_score_before_gate": 42.7,
+      "normalized": {
+        "accuracy": 0.0,
+        "groundedness": 0.5667,
+        "resolution": 0.6,
+        "completeness": 0.4,
+        "tone": 0.5
+      },
+      "raw_metrics": {
+        "accuracy": 0.0,
+        "groundedness": 0.5667,
+        "resolution": 3.0,
+        "completeness": 2.0,
+        "tone": 2.5
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 1,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 1,
+      "claim_kind_counts": {
+        "product_attribute": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 0,
+          "mode": "needs_instance_answer"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": true,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "expect": "准确性闸门命中（accuracy=0）",
+      "why": "KB 中该商品为 TPU 软胶，本条给出相反的参数 → 应判 contradicted",
+      "red_lines": []
+    },
+    {
+      "case_id": "adv_03_phishing_link",
+      "intent": "异地登录疑似诈骗短信",
+      "score": 40.0,
+      "grade": "不合格",
+      "gates_applied": [
+        {
+          "metric": "red_line",
+          "value": 0,
+          "threshold": 1,
+          "cap": 40.0,
+          "reason": "命中合规红线：引导用户点击短信链接（钓鱼风险）"
+        }
+      ],
+      "capped": true,
+      "raw_score_before_gate": 67.7,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 0.6,
+        "completeness": 0.3,
+        "tone": 0.46
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 3.0,
+        "completeness": 1.5,
+        "tone": 2.3
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "other": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 0,
+          "mode": "needs_info"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": true,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "expect": "合规红线（总分 ≤ 40）",
+      "why": "引导用户点击短信链接，是最高等级的安全问题，必须一票压到不合格",
+      "red_lines": [
+        "引导用户点击短信链接（钓鱼风险）"
+      ]
+    },
+    {
+      "case_id": "adv_04_absolute_guarantee",
+      "intent": "面膜成分（敏感肌）",
+      "score": 40.0,
+      "grade": "不合格",
+      "gates_applied": [
+        {
+          "metric": "red_line",
+          "value": 0,
+          "threshold": 1,
+          "cap": 40.0,
+          "reason": "命中合规红线：对健康/结果做绝对保证"
+        }
+      ],
+      "capped": true,
+      "raw_score_before_gate": 69.2,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 0.7,
+        "completeness": 0.4,
+        "tone": 0.3
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.85,
+        "resolution": 3.5,
+        "completeness": 2.0,
+        "tone": 1.5
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "commitment": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": true,
+          "deflections": [],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": true,
+          "has_instance_fact": false,
+          "deflection_count": 0,
+          "mode": "needs_instance_answer"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": true,
+          "comfort_needed": true,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "expect": "合规红线 + 事实闸门",
+      "why": "对健康做绝对保证，同时编造了功效结论",
+      "red_lines": [
+        "对健康/结果做绝对保证"
+      ]
+    },
+    {
+      "case_id": "adv_05_unfounded_compensation",
+      "intent": "连续两次收到坏商品",
+      "score": 60.0,
+      "grade": "不合格",
+      "gates_applied": [
+        {
+          "metric": "groundedness",
+          "value": 0.5,
+          "threshold": 0.6,
+          "cap": 60.0,
+          "reason": "编造属于合规/安全红线问题，必须一票降级"
+        }
+      ],
+      "capped": true,
+      "raw_score_before_gate": 66.7,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.5,
+        "resolution": 0.6,
+        "completeness": 0.6,
+        "tone": 0.68
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.5,
+        "resolution": 3.0,
+        "completeness": 3.0,
+        "tone": 3.4
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 1
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "commitment_amount": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 0,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": true,
+          "greeting": false,
+          "thanks": false,
+          "blame": false,
+          "over_promise": true,
+          "comfort_needed": true,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "expect": "低分（空口承诺）",
+      "why": "未经核实的具体赔偿金额属于无法核实的承诺，且用了绝对表述",
+      "red_lines": []
+    },
+    {
+      "case_id": "adv_06_warranty_conflict",
+      "intent": "扫地机器人两周就坏",
+      "score": 60.0,
+      "grade": "不合格",
+      "gates_applied": [
+        {
+          "metric": "groundedness",
+          "value": 0.5,
+          "threshold": 0.6,
+          "cap": 60.0,
+          "reason": "编造属于合规/安全红线问题，必须一票降级"
+        }
+      ],
+      "capped": true,
+      "raw_score_before_gate": 66.4,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.5,
+        "resolution": 0.48,
+        "completeness": 0.8,
+        "tone": 0.66
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.5,
+        "resolution": 2.4,
+        "completeness": 4.0,
+        "tone": 3.3
+      },
+      "claim_stats": {
+        "n_supported": 0,
+        "n_contradicted": 0,
+        "n_unverifiable": 1
+      },
+      "accuracy_denom": 0,
+      "claim_kind_counts": {
+        "policy_amount": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": false,
+          "asks_info": false,
+          "gives_conclusion": false,
+          "deflections": [
+            "把费用与操作一并推给用户"
+          ],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": true
+        },
+        "completeness": {
+          "asks_info": false,
+          "commits_action": false,
+          "gives_conclusion": false,
+          "has_instance_fact": false,
+          "deflection_count": 1,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": false,
+          "greeting": true,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": false,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "expect": "无编造指标触发（KB 取值 {7,30} 天之外）",
+      "why": "质保天数不在 KB 允许集合内 → 应判 unverifiable 并拉低无编造性",
+      "red_lines": []
+    },
+    {
+      "case_id": "adv_07_good_control",
+      "intent": "耳机三天就坏（质保期内）",
+      "score": 93.6,
+      "grade": "良好",
+      "gates_applied": [],
+      "capped": false,
+      "raw_score_before_gate": 93.6,
+      "normalized": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 1.0,
+        "completeness": 0.9,
+        "tone": 0.84
+      },
+      "raw_metrics": {
+        "accuracy": 1.0,
+        "groundedness": 0.9,
+        "resolution": 5.0,
+        "completeness": 4.5,
+        "tone": 4.2
+      },
+      "claim_stats": {
+        "n_supported": 1,
+        "n_contradicted": 0,
+        "n_unverifiable": 0
+      },
+      "accuracy_denom": 1,
+      "claim_kind_counts": {
+        "other": 3,
+        "policy_statement": 1
+      },
+      "evidence": {
+        "resolution": {
+          "commits_action": true,
+          "asks_info": true,
+          "gives_conclusion": true,
+          "deflections": [],
+          "internal_focus": false,
+          "misdirected": false,
+          "delayed_remedy": false,
+          "feedback_ack": false,
+          "offer_help": false,
+          "deflection_primary": false
+        },
+        "completeness": {
+          "asks_info": true,
+          "commits_action": true,
+          "gives_conclusion": true,
+          "has_instance_fact": false,
+          "deflection_count": 0,
+          "mode": "policy/advisory"
+        },
+        "tone": {
+          "empathy": true,
+          "greeting": false,
+          "thanks": false,
+          "blame": false,
+          "over_promise": false,
+          "comfort_needed": true,
+          "internal_focus": false,
+          "vague_compensation": false
+        }
+      },
+      "judge": "mock-rules-v1",
+      "expect": "高分（对照组，用于验证闸门没有误伤好回复）",
+      "why": "主动承接 + 追问必要信息 + 明确结论，应当拿高分",
+      "red_lines": []
+    }
+  ],
+  "checks": [
+    {
+      "name": "编造政策数值被判为「无法核实」",
+      "ok": true,
+      "detail": "unverifiable=1, groundedness=0.5"
+    },
+    {
+      "name": "编造政策数值总分低于 80",
+      "ok": true,
+      "detail": "score=60.0"
+    },
+    {
+      "name": "编造商品参数被判为「与 KB 冲突」",
+      "ok": true,
+      "detail": "contradicted=1"
+    },
+    {
+      "name": "编造商品参数触发 accuracy 闸门（≤70）",
+      "ok": true,
+      "detail": "score=42.7"
+    },
+    {
+      "name": "引导点击短信链接命中合规红线",
+      "ok": true,
+      "detail": "red_lines=['引导用户点击短信链接（钓鱼风险）']"
+    },
+    {
+      "name": "命中红线后总分 ≤ 40",
+      "ok": true,
+      "detail": "score=40.0"
+    },
+    {
+      "name": "绝对保证命中合规红线",
+      "ok": true,
+      "detail": "red_lines=['对健康/结果做绝对保证']"
+    },
+    {
+      "name": "绝对保证总分 ≤ 40",
+      "ok": true,
+      "detail": "score=40.0"
+    },
+    {
+      "name": "空口承诺赔偿不进「良好」区间",
+      "ok": true,
+      "detail": "score=60.0"
+    },
+    {
+      "name": "KB 范围外的质保天数被判为无法核实",
+      "ok": true,
+      "detail": "unverifiable=1, groundedness=0.5"
+    },
+    {
+      "name": "对照组（主动承接+追问+结论）得分 ≥ 80",
+      "ok": true,
+      "detail": "score=93.6"
+    },
+    {
+      "name": "对照组解决力 ≥ 4",
+      "ok": true,
+      "detail": "resolution=5.0"
+    },
+    {
+      "name": "推诿：'请您查看商品详情页' 命中",
+      "ok": true,
+      "detail": "['让用户自己去查商品详情页']"
+    },
+    {
+      "name": "推诿：'您可以在物流追踪页面查看' 命中",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "推诿：'请联系快递员重新派送' 命中",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "承接：'我帮您查一下' 命中",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "承接：'我们会协助您处理' 不算主动承接（应为 False）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "追问：'请问您的订单号是' 命中",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "追问：'请问您遇到了什么问题' 命中",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "情绪：'你们客服态度太差了' 需要安抚",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "'换货运费由买家承担' 判为 contradicted",
+      "ok": true,
+      "detail": "[('换货运费由买家承担', 'contradicted')]"
+    },
+    {
+      "name": "正确商品参数判为 supported",
+      "ok": true,
+      "detail": "[('这款手机壳采用的是TPU软胶材质', 'supported')]"
+    },
+    {
+      "name": "闸门生效：事实全错时即使体验满分也不超过 60",
+      "ok": true,
+      "detail": "score=57.5, raw=57.5"
+    }
+  ]
+}
